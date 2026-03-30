@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Database1" Class="DataClasses1DataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="AppSettings" ConnectionString="Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\Database1.mdf;Integrated Security=True" SettingsObjectName="Eligibility.Properties.Settings" SettingsPropertyName="Database1ConnectionString" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.lecterDetail" Member="lecterDetails">
+    <Type Name="lecterDetail">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="UserName" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Pasword" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.studentDetail" Member="studentDetails">
+    <Type Name="studentDetail">
+      <Column Name="StudentID" Type="System.String" DbType="NChar(10) NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Name" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="Age" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="Address" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="[Phone no]" Member="Phone_no" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Password" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.updateAttendense" Member="updateAttendenses">
+    <Type Name="updateAttendense">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="studentId" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="subject" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="date" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="status" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.updateMark" Member="updateMarks">
+    <Type Name="updateMark">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="StudentId" Type="System.String" DbType="NChar(10)" CanBeNull="true" />
+      <Column Name="Subject" Type="System.String" DbType="NChar(50)" CanBeNull="true" />
+      <Column Name="ICA1" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ICA2" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="ICA3" Type="System.Int32" DbType="Int" CanBeNull="true" />
+    </Type>
+  </Table>
+</Database>
